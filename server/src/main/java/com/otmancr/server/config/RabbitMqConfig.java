@@ -13,29 +13,39 @@ public class RabbitMqConfig {
     public static final String RPC_MESSAGE_QUEUE = "rpc_msg_queue";
     public static final String RPC_REPLY_MESSAGE_QUEUE = "rpc_reply_msg_queue";
     public static final String RPC_EXCHANGE = "rpc_exchange";
-
+    /** *
+     * Configure the Send Message Queue
+     */
     @Bean
     Queue msgQueue() {
         return new Queue(RPC_MESSAGE_QUEUE);
     }
-
+    /** *
+     * Return Queue Configuration
+     */
     @Bean
     Queue replyQueue() {
         return new Queue(RPC_REPLY_MESSAGE_QUEUE);
     }
-
+    /** *
+     * Switch setting
+     */
     @Bean
     TopicExchange topicExchange() {
         return new TopicExchange(RPC_EXCHANGE);
     }
-
+    /** *
+     * Queuing and Switch Link Request
+     */
     @Bean
     Binding msgBinding() {
         return BindingBuilder.bind(msgQueue())
                 .to(topicExchange())
                 .with(RPC_MESSAGE_QUEUE);
     }
-
+    /** *
+     * Back to Queue and Switch Link
+     */
     @Bean
     Binding replyBinding() {
         return BindingBuilder.bind(replyQueue())
