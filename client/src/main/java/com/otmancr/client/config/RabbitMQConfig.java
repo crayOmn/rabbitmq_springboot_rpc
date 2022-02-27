@@ -11,6 +11,11 @@ import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author Otmancr
+ * @GitHub https://github.com/crayOmn
+ * @Medium https://medium.com/@infogenie
+ */
 @Configuration
 public class RabbitMQConfig {
     public static final String RPC_MESSAGE_QUEUE = "rpc_msg_queue";

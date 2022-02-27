@@ -7,6 +7,11 @@ import org.springframework.amqp.core.TopicExchange;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author Otmancr
+ * @GitHub https://github.com/crayOmn
+ * @Medium https://medium.com/@infogenie
+ */
 @Configuration
 public class RabbitMqConfig {
 

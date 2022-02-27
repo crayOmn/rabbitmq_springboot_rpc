@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 
+/**
+ * @author Otmancr
+ * @GitHub https://github.com/crayOmn
+ * @Medium https://medium.com/@infogenie
+ */
 @RestController
 public class ClientController {
 
